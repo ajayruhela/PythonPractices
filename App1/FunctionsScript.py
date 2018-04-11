@@ -66,3 +66,37 @@ def printinfo( arg1, *vartuple ):
 printinfo( 10 )
 printinfo( 70, 60, 50 )
 
+# lambda funtions
+sum = lambda arg1, arg2: arg1 + arg2;
+
+# Now you can call sum as a function
+print ("Value of total : ", sum( 10, 20 ))
+print ("Value of total : ", sum( 20, 20 ))
+
+# return 
+def Add( arg1, arg2 ):
+   # Add both the parameters and return them."
+   total = arg1 + arg2
+   print ("Inside the function : ", total)
+   return total;
+
+# Now you can call sum function
+total = Add( 10, 20 );
+print ("Outside the function : ", total )
+
+# Global and Local Scope
+#Variables that are defined inside a function body have a local scope, and those defined outside have a global scope.
+######################
+total = 0; # This is global variable.
+# Function definition is here
+def getTotal( arg1, arg2 ):
+   # Add both the parameters and return them."
+   total = arg1 + arg2; # Here total is local variable.
+   print ("Inside the function local total : ", total)
+   return total;
+
+# Now you can call sum function
+getTotal( 10, 20 );
+print ("Outside the function global total : ", total)
+
+##########################
